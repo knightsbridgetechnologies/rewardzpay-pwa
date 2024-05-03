@@ -13,7 +13,7 @@ const Navbar = ({params}) => {
         await logout()
         router.push("/")
     }
-    console.log(usePathname);
+
     return (
         <div>
             <nav className=" bg-primary py-4 ">
