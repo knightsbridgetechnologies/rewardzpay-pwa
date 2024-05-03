@@ -6,6 +6,7 @@ import OtpVerify from '../components/OtpVerify'
 import ChangePassword from '../components/ChangePassword'
 import Image from 'next/image'
 
+
 const page = () => {
 
     const [resetPassword,setresetPassword] = useState(true)
@@ -21,12 +22,10 @@ const page = () => {
             <Navbar />
             <div className="flex justify-center items-center mt-40">
                 <div className="w-96 p-6 shadow-lg bg-white rounded-md">
-                    <div className="flex items-center justify-center">
+                    <div className="flex items-center justify-center pb-3">
                         <Image src="/rewardzpay.png" width={150} height={120} alt="rewardzpay" priority/>
                     </div>
-                    <hr className='mt-2 mb-2' />
-                    <h1 className="text-2xl font-bold text-center text-blue-900">Reset Password</h1>
-
+                    
                     {isVerify && 
                         <VerifyEmail 
                             setIsVerify={setIsVerify} 

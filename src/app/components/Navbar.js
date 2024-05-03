@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { useRouter,usePathname  } from "next/navigation"
 import { logout } from '../action'
-import { FaPowerOff  } from 'react-icons/fa'
+import { FaArrowLeft } from "react-icons/fa"
 
 const Navbar = ({params}) => {
     
@@ -18,7 +18,10 @@ const Navbar = ({params}) => {
         <div>
             <nav className=" bg-primary py-4 ">
                 <div className="grid grid-cols-2 gap-2">
-                    <div className="px-3 text-left text-white font-medium text-xl">
+                    <div className="flex items-center px-3 text-left text-white font-medium text-xl">
+                        {logoutView !== '/home' ?
+                            <FaArrowLeft className='mr-2 font-semibold cursor-pointer' onClick={() => router.back() }/>
+                        : '' }
                         {logoutView == '/' ? 'Login': 
                         logoutView == '/signup' ? 'Sign Up' : 
                         logoutView == '/reset-password' ? 'Reset Password' : 

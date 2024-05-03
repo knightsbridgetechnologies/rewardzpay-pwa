@@ -74,7 +74,7 @@ const Login = () => {
                     <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                         <span className="text-muted sm:text-sm"> <FaUser className='text-muted' /></span>
                     </div>
-                    <input type="text" name="email" id="emailAddress" className="block w-full rounded-md border border-muted py-2 pl-7 placeholder:text-muted focus:ring-1 focus:ring-inset focus:ring-primary" placeholder="Email" />
+                    <input type="text" name="email" id="emailAddress" className="block w-full rounded-md border border-muted py-2 pl-[2.3rem] placeholder:text-muted focus:ring-1 focus:ring-inset focus:ring-primary" placeholder="Email" />
                 </div>
 
                 <div className="relative mt-2 rounded-md shadow-sm">
@@ -87,7 +87,7 @@ const Login = () => {
                         name="password"
                         onChange={onChange}
                         id='password'
-                        className="block w-full rounded-md border border-muted py-2 pl-7 placeholder:text-muted focus:ring-1 focus:ring-inset focus:ring-primary" placeholder="Password" />
+                        className="block w-full rounded-md border border-muted py-2 pl-[2.3rem] placeholder:text-muted focus:ring-1 focus:ring-inset focus:ring-primary" placeholder="Password" />
 
                     {showPassword ?  
                     

@@ -17,9 +17,10 @@ export default async function page(){
                         <div>
                             <a href="/validate" className="md-xl:p-6 sm:p-3 flex md-xl:items-center md-xl:bg-gray-100 md-xl:rounded-lg md-xl:shadow-md">
                                 <div className="mr-4">
-                                    <Image src="/validate_main_menu_icon.png" width={50} height={50} alt="Validate E-Vouchers Icon" priority/></div>
+                                    <Image src="/validate_main_menu_icon.png" width={50} height={50} alt="Validate E-Vouchers Icon" priority/>
+                                </div>
                                 <div>
-                                    <p className="md-xl:text-2xl sm:text-[22px] font-bold flex items-center justify-center mt-2">Validate E-Vouchers</p>
+                                    <p className="md-xl:text-2xl sm:text-[22px] font-bold flex items-center justify-center">Validate E-Vouchers</p>
                                 </div>
                             </a>
                         </div>
@@ -35,4 +36,3 @@ export default async function page(){
         </div>
     )
 }
-
