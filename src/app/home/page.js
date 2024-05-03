@@ -15,7 +15,7 @@ export default async function page(){
                 <div className="md-xl:p-6 sm:w-full md:w-full bg-white md-xl:rounded-md">
                     <div className="md-xl:grid md-xl:grid-cols-2 md:grid-cols-2 md-xl:gap-4 md-xl:p-4 rounded-lg mt-5">
                         <div>
-                            <a href="/validate" className="md-xl:p-6 sm:p-3 flex md-xl:items-center md-xl:bg-gray-100 md-xl:rounded-lg md-xl:shadow-md">
+                            <a href="/validate" className="md-xl:p-6 sm:p-3 flex items-center md-xl:bg-gray-100 md-xl:rounded-lg md-xl:shadow-md">
                                 <div className="mr-4">
                                     <Image src="/validate_main_menu_icon.png" width={50} height={50} alt="Validate E-Vouchers Icon" priority/>
                                 </div>
