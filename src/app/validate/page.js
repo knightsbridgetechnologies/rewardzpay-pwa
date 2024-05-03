@@ -59,7 +59,7 @@ const page = () => {
                                 width="80"
                                 ariaLabel="color-ring-loading"
                                 wrapperStyle={{}}
-                                wrapperClass="color-ring-wrapper"
+                                wrapperclassName="color-ring-wrapper"
                                 colors={['##000080']}
                             />                            
                         </div>

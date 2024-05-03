@@ -51,17 +51,17 @@ export default  function page() {
 
     return (
         <div>
-            <nav className=" bg-blue-900 py-4 ">                
+            <nav className=" bg-primary py-4 ">                
                 <div className="px-3 text-right">                   
                     <input type='text' 
-                        className='border rounded-lg  p-1 border-black-700 bg-blue-900 text-white' 
+                        className='border rounded-lg  p-1 border-black-700 bg-primary text-white' 
                         value={params.voucher_reference} 
                         onChange={(e) => setParams({...params,voucher_reference: e.target.value})} 
                         placeholder='Search by reference no'
                     />
                     <button onClick={gotoHome} href="/home" className='text-white mr-7 pl-1'><FaHome /></button>
                     <button  onClick={shareReportData} className='text-white mr-7 pl-1'><FaShareAlt /></button >  
-                    <button  onClick={logoutUser} className='text-white '><FaPowerOff /></button >                                         
+                    <button  onClick={logoutUser} className='text-white '><FaPowerOff /></button>                                         
                 </div>
             </nav>
             
@@ -79,7 +79,7 @@ export default  function page() {
                                     width="80"
                                     ariaLabel="color-ring-loading"
                                     wrapperStyle={{}}
-                                    wrapperClass="color-ring-wrapper"
+                                    wrapperclassName="color-ring-wrapper"
                                     colors={['##000080']}
                                 />                                
                             </div>

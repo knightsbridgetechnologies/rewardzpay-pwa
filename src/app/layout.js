@@ -1,8 +1,11 @@
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
+  subsets: ["latin"]
+});
 
 export const metadata = {
   title: "RewardzPay",
