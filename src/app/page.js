@@ -32,7 +32,7 @@ export default function Home() {
     <>
       <Navbar />
       <PwaModel show={showInstallModal} setshowInstallModal={setshowInstallModal} prompt={prompt}/>
-      <div className="flex justify-center items-center mt-40">
+      <div className="flex justify-center items-center md-xl:mt-[5rem] sm:mt-[3rem]">
         <div className="w-96 p-6 lg:shadow-lg bg-white rounded-md">
           <div className="flex items-center justify-center pb-3">
             <Image src="/rewardzpay.png" width={150} height={120} alt="rewardzpay" priority/>
