@@ -1,6 +1,6 @@
 'use client'
 import {useEffect, useState, React} from 'react'
-import { Html5QrcodeScanner } from "html5-qrcode";
+import { Html5QrcodeScanner,Html5QrcodeScanType } from "html5-qrcode";
 import Navbar from '../components/Navbar';
 import { validateQrCode } from '../action';
 import QrSuccess from '../components/QrSuccess';
@@ -26,6 +26,7 @@ const page = () => {
             },
             fps: 2,
             rememberLastUsedCamera: true,
+            supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA]
         })
 
         scanner.render(success,error)
@@ -49,7 +50,17 @@ const page = () => {
             <Navbar />
             <div className="flex justify-center items-center mt-40">
                 <div className="w-96 p-6 shadow-lg bg-white rounded-md">
-                    <div id="reader">
+                    {
+                        scanResult.error == null ?
+                        <div className='bg-blue-200 rounded-md p-1'>
+                            <h4 className='flex justify-center items-center'>Steps to open camera</h4>
+                            <p>Step 1: Click Request Camera Permissions</p>
+                            <p>Step 2: Allow app to access camera</p>
+                            <p>Step 3: Select back camera to scan image</p>
+                            <p>Step 4: Click start scanning option</p>
+                        </div> : ""
+                    }
+                    <div id="reader" className='mt-2'>
                     </div> 
                         {scanResult.error == null ? 
                         <div className='flex justify-center'>
@@ -59,7 +70,7 @@ const page = () => {
                                 width="80"
                                 ariaLabel="color-ring-loading"
                                 wrapperStyle={{}}
-                                wrapperclassName="color-ring-wrapper"
+                                wrapperClass="color-ring-wrapper"
                                 colors={['##000080']}
                             />                            
                         </div>
