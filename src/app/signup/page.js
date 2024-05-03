@@ -25,8 +25,7 @@ const page = () => {
                     <div className="flex items-center justify-center">
                         <Image src="/rewardzpay.png" width={150} height={120} alt="rewardzpay" priority/>
                     </div>
-                    <hr className='mt-2 mb-2' />
-                    <h1 className="text-2xl font-bold text-center text-blue-900">Merchant Registration</h1> 
+                  
 
                     {isVerify && 
                         <VerifyEmail 
