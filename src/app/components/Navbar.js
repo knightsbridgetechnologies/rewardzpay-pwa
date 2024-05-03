@@ -10,7 +10,7 @@ const Navbar = ({params}) => {
     const [logoutView, setLogoutView] = useState(usePathname())
 
     async function logoutUser() {
-        await logout()
+        // await logout()
         router.push("/")
     }
 

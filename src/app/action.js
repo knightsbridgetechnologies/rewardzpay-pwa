@@ -82,7 +82,7 @@ export async function getMerchantSession(){
 
     if(cookies().has('session')) {
         const session = cookies().get('session').value
-        return session
+        return JSON.parse(session)
     }else{
         return null
     }
