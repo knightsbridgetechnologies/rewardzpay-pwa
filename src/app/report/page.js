@@ -5,7 +5,7 @@ import ReportCard from '../components/ReportCard'
 import { useRouter  } from "next/navigation"
 import { ColorRing } from 'react-loader-spinner'
 import {toast} from 'react-hot-toast'
-import { FaArrowLeft, FaHome, FaShareAlt, FaSearch, FaFilter, FaPowerOff  } from 'react-icons/fa'
+import { FaArrowLeft,FaShareAlt, FaSearch, FaFilter, FaTimes  } from 'react-icons/fa'
 
 export default  function page() {
 
@@ -21,11 +21,6 @@ export default  function page() {
         router.push("/home")
     }
 
-   
-
-    const toggleSearch = () => {
-        setIsSearchOpen(!isSearchOpen);
-    };
 
     async function shareReportData(){
         const response = await emailReportData(params)
@@ -56,9 +51,29 @@ export default  function page() {
         fetchData()
     },[params])
 
+    const toggleSearch = () => {
+        setIsSearchOpen(!isSearchOpen);
+        setParams('');
+    };
+
     return (
         <div>
-            <nav className=" bg-primary py-4 ">
+            {isSearchOpen && (
+                <div className="fixed top-0 left-0 w-full bg-white border-0 shadow-lg py-4 px-3 flex items-center">
+                    <input
+                        type="text"
+                        value={params.voucher_reference}
+                        onChange={(e) => setParams({...params,voucher_reference: e.target.value})}
+                        placeholder="Search by Reference No"
+                        className="flex-grow p-2 rounded border-0 0 mr-4"
+                    />
+                    <button onClick={toggleSearch}>
+                        <FaTimes className="text-gray-500" />
+                    </button>
+                </div>
+            )}
+
+            <nav className="bg-primary py-4">
                 <div className="grid grid-cols-2 gap-2">
                     <div className="flex items-center px-3 text-left text-white font-medium text-xl">
                         <button onClick={gotoHome}><FaArrowLeft className='mr-2 font-semibold cursor-pointer'/></button>    
@@ -66,30 +81,17 @@ export default  function page() {
                     </div>
                     
                     <div className="flex items-center justify-end px-3 text-right font-sm font-normal text-white">
-                        
-                        {/* <input type='text' 
-                            className='border rounded-lg  p-1 border-black-700 bg-primary text-white' 
-                            value={params.voucher_reference} 
-                            onChange={(e) => setParams({...params,voucher_reference: e.target.value})} 
-                            placeholder='Search by reference no'
-                        /> */}
-
                         <div className="flex">
                             <div className="mt-2">
                                 <button id="searchBtn" className="text-white mr-4 pl-1" onClick={toggleSearch}>
                                     <FaSearch className='text-xl' />
                                 </button>
-                                {isSearchOpen && (
-                                    <input type="text" placeholder="Search..." className="absolute top-0 right-0 mt-8 p-2 rounded border border-gray-300"/>
-                                )}
-                            </div>
-                            <button onClick={gotoHome} href="/home" className='text-white mr-4 pl-1'><FaFilter className='text-xl' /></button>
-                            <button  onClick={shareReportData} className='text-white mr-4 pl-1'><FaShareAlt className='text-xl' /></button > 
+                                <button onClick={gotoHome} href="/home" className='text-white mr-4 pl-1'><FaFilter className='text-xl' /></button>
+                                <button onClick={shareReportData} className='text-white mr-4 pl-1'><FaShareAlt className='text-xl' /></button > 
+                            </div>      
                         </div>
-                                       
                     </div>
                 </div>
-               
             </nav>
             
             <div className="md-xl:flex md-xl:justify-center md-xl:items-center">
