@@ -17,9 +17,9 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       'white': '#ffffff',
-      'primary': '#00254d',
-      'secondary': '#58c010',
-      'muted': '#adadad'
+      'primary': '#00254C',
+      'secondary': '#59C011',
+      'muted': '#bdbdbd'
     },
     screens: {
       'sm': {'max': '640px'},

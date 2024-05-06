@@ -6,7 +6,7 @@ const ReportCard = ({voucher}) => {
         <>            
             <div className="justify-center items-center h-center">
                 <div className="p-3 bg-white rounded-md">
-                    <ul className="max-w-md divide-y divide-muted dark:divide-muted mt-2">
+                    <ul className="max-w-md mt-2">
                         <li className="pb-3 sm:pb-4">
                             <div className="flex items-center space-x-4 rtl:space-x-reverse">                       
                                 <div className="flex-1 min-w-0">
