@@ -31,7 +31,7 @@ export default function page()  {
         <div>
             <Navbar />
             <div className="flex justify-center items-center mt-40">
-                <div className="w-96 p-6 shadow-lg bg-white rounded-md">
+                <div className="w-96 p-6">
                 {
                     response.error == null ?                             
                         <div className='flex justify-center'>
@@ -50,13 +50,13 @@ export default function page()  {
                             <div className="bg-gray-100 p-6 rounded-lg shadow-md">                
                                 <div className='text-center justify-center'>
                                 <div className='text-center flex flex-col justify-center items-center'>
-                        <           FaCheckCircle  className='text-green-400 text-6xl mb-4 justify-center' />
+                                    <FaCheckCircle  className='text-green-400 text-6xl mb-4 justify-center' />
                                 </div>
                                     <h2 className="text-2xl font-bold">{response.message}</h2>
                                     <p className="mt-2 mb-4">
                                         Reference No : {response.data.invoice_ref_number}
                                     </p>                                    
-                                    <a href="/home" className="bg-white-500 text-black rounded-full border border-green-600 px-4 py-2 mt-2">
+                                    <a href="/home" className="bg-secondary text-white rounded px-4 py-2 mt-2">
                                         Home
                                     </a>
                                 </div>
@@ -69,7 +69,7 @@ export default function page()  {
                                 </div>
                                     <h2 className="text-2xl font-bold">{response.message}</h2>
 
-                                    <a href="/home" className="inline-block bg-white-500 text-black rounded-full border border-green-600 mt-2 px-4 py-2">
+                                    <a href="/home" className="inline-block bg-secondary text-white rounded mt-2 px-4 py-2">
                                         Home
                                     </a>                   
                                 </div>
