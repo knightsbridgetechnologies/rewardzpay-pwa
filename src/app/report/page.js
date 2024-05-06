@@ -9,13 +9,14 @@ import { FaArrowLeft,FaShareAlt, FaSearch, FaFilter, FaTimes  } from 'react-icon
 import { DateRangePicker } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
+import { format } from 'date-fns';
 
 export default  function page() {
 
     const router = useRouter();
     const[params,setParams] = useState({
-        start_date:'',
-        end_date:'',
+        start_date: '',
+        end_date: '',
         voucher_reference:''
     })
 
@@ -28,9 +29,8 @@ export default  function page() {
     const [selectionRange, setSelectionRange] = useState({
         startDate: new Date(),
         endDate: new Date(new Date().setDate(new Date().getDate() + 6)),
-        key: 'selection',
-      });
-
+        key: 'selection'
+    });
 
     const toggleSearch = () => {
         setIsSearchOpen(!isSearchOpen);
@@ -47,18 +47,24 @@ export default  function page() {
     }
 
     const handleRangeSelect = (ranges) => {
+        const formattedStartDate = format(ranges.selection.startDate, 'yyyy-MM-dd');
+        const formattedEndDate = format(ranges.selection.endDate, 'yyyy-MM-dd');
+        setParams({
+            ...params,
+            start_date: formattedStartDate,
+            end_date: formattedEndDate
+        });
         setSelectionRange(ranges.selection);
-        console.log(ranges.selection);
 
     };
 
     const handleApply = () => {
-        setShowDateRangePicker(false); // Close DateRangePicker when "Apply" is clicked
-      };
+        setShowDateRangePicker(false);
+    };
     
-      const handleClose = () => {
-        setShowDateRangePicker(false); // Close DateRangePicker when "Close" is clicked
-      };
+    const handleClose = () => {
+    setShowDateRangePicker(false);
+    };
 
 
     const toggleDateRangePicker = () => {
@@ -111,6 +117,7 @@ export default  function page() {
                             inputRanges={[]}
                             color="#00254C" // Change the color of the selected range
                             rangeColors={['#00254C']} // Change the color of the range bar
+                            dateDisplayFormat='yyyy-MM-dd'
                         />
                         <div className='flex justify-end space-x-2'>
                             <button onClick={handleClose} className='bg-white hover:bg-gray-100 text-gray-800 text-sm font-semibold py-1 px-4 border border-gray-400 rounded shadow'>Close</button>
