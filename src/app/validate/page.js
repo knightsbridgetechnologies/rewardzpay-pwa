@@ -49,7 +49,7 @@ const page = () => {
         <>
             <Navbar />
             <div className="flex justify-center items-center mt-40">
-                <div className="w-96 p-6 shadow-lg bg-white rounded-md">
+                <div className="w-96 p-6 bg-white rounded-md">
                     {
                         scanResult.error == null ?
                         <div className='bg-blue-200 rounded-md p-1'>
