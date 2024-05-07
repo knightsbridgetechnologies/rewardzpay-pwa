@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { verifyClientOtp } from '../action'
 import {toast} from 'react-hot-toast'
 import { z } from 'zod'
-import { HiDotsHorizontal } from "react-icons/hi";
+import { FaKey } from "react-icons/fa";
 
 const verifyOTPSchema = z.object({
     id: z.number().optional(),
@@ -55,7 +55,7 @@ const OtpVerify = ({userCode,verificationCode,setpasswordChangeView,accessToken,
                 <form className="flex flex-col mt-3" action={submitOtp}>
                     <div className="relative mt-2 rounded-md shadow-sm mb-4">
                         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                            <span className="text-muted sm:text-sm"> <HiDotsHorizontal className='text-muted text-xl' /></span>
+                            <span className="text-muted sm:text-sm"> <FaKey className='text-muted text-xl' /></span>
                         </div>
                         <input type="text" name="otp" className="block w-full rounded-md border border-muted py-2 pl-[2.3rem] placeholder:text-muted focus:ring-1 focus:ring-inset focus:ring-primary" placeholder="OTP" />
                     </div>                

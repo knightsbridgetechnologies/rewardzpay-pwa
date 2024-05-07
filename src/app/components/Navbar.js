@@ -19,7 +19,9 @@ const Navbar = ({params}) => {
             <nav className=" bg-primary py-4 ">
                 <div className="grid grid-cols-2 gap-2">
                     <div className="flex items-center px-3 text-left text-white font-medium text-xl">
-                        {logoutView !== '/home' ?
+                        {logoutView == '/' ?
+                            ''
+                        : logoutView !== '/home' ?
                             <FaArrowLeft className='mr-2 font-semibold cursor-pointer' onClick={() => router.back() }/>
                         : '' }
                         {logoutView == '/' ? 'Login': 

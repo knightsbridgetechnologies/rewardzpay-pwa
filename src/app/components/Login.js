@@ -10,8 +10,8 @@ import Link from 'next/link'
 
 const authSchema = z.object({
     id: z.number().optional(),
-    email: z.string().min(1,{message:"The email field is required"}).email("Invalid email provided."),
-    password: z.string().min(8,{message: "The password must contain 8 characters"})
+    email: z.string().email("Invalid email provided."),
+    password: z.string().min(1,{message: "The password field is required"})
 })
 
 const Login = () => {

@@ -21,7 +21,7 @@ const page = () => {
         <div>
             <Navbar />
             <div className="flex justify-center items-center mt-40">
-                <div className="w-96 p-6 shadow-lg bg-white rounded-md">
+                <div className="w-96 p-6  bg-white rounded-md">
                     <div className="flex items-center justify-center pb-3">
                         <Image src="/rewardzpay.png" width={150} height={120} alt="rewardzpay" priority/>
                     </div>
