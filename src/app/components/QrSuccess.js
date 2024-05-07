@@ -12,15 +12,17 @@ const QrSuccess = ({props}) => {
                         <FaCheckCircle  className='text-secondary text-6xl mb-4 justify-center' />
                     </div>
                     <h2 className="font-bold pb-6 text-center">{props.message}</h2>
-                    <p className="mt-2 mb-4 text-base">
-                        Merchant : {props.data.merchantName}
-                    </p>
-                    <p className="mt-2 mb-4 text-base">
-                        Amount : {props.data.amount}
-                    </p>
-                    <p className="mt-2 mb-4 text-base">
-                        Expire Date : {props.data.expire_date}
-                    </p>
+                    <div className='text-center'>
+                        <p className="mt-2 mb-4 text-base">
+                            Merchant : {props.data.merchantName}
+                        </p>
+                        <p className="mt-2 mb-4 text-base">
+                            Amount : {props.data.amount}
+                        </p>
+                        <p className="mt-2 mb-4 text-base">
+                            Expire Date : {props.data.expire_date}
+                        </p>
+                    </div>
 
                     <h3 className="mt-[2.3rem] mb-4 font-bold text-center ">Do you want to redeem this now?</h3>
 
