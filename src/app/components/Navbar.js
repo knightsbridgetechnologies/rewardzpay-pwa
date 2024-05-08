@@ -18,7 +18,7 @@ const Navbar = ({params}) => {
         <div>
             <nav className=" bg-primary py-4 ">
                 <div className="grid grid-cols-2 gap-2">
-                    <div className="flex items-center px-3 text-left text-white font-medium text-base">
+                    <div className="flex items-center px-3 text-left text-white font-medium text-xl">
                         {logoutView == '/' ?
                             ''
                         : logoutView !== '/home' ?
@@ -26,13 +26,13 @@ const Navbar = ({params}) => {
                         : '' }
                         {logoutView == '/' ? 'Login': 
                         logoutView == '/signup' ? 'Sign Up' : 
-                        logoutView == '/reset-password' ? 'Reset Password' : 
+                        logoutView == '/reset-password' ? <span className="text-nowrap">Reset Password</span> : 
                         logoutView == '/home' ? 'RewardzPay' : '' } 
                     </div>
                     {logoutView !== '/' ?
-                        <div className="px-3 text-right font-sm font-normal text-white">
+                        <div className="px-3 text-right font-normal text-white">
                             { logoutView == '/' | logoutView == '/signup' | logoutView == '/reset-password'? " " :
-                                <button  onClick={logoutUser} className='text-white'> SIGN OUT</button > 
+                                <button  onClick={logoutUser} className='text-white text-[14px]'> SIGN OUT</button > 
                             }                    
                         </div>
                     : '' }

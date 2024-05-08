@@ -63,12 +63,12 @@ export default  function page() {
     };
     
     const handleClose = () => {
-    setShowDateRangePicker(false);
-    };
-
-
-    const toggleDateRangePicker = () => {
-        setShowDateRangePicker(!showDateRangePicker);
+        setParams({
+            ...params,
+            start_date: '',
+            end_date: ''
+        });
+        setShowDateRangePicker(false);
     };
     
     async function shareReportData(){
