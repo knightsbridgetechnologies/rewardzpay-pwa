@@ -48,7 +48,7 @@ const page = () => {
     return (
         <>
             <Navbar />
-            <div className="flex justify-center items-center mt-40">
+            <div className="flex justify-center items-center mt-5">
                 <div className="w-96 p-6 bg-white rounded-md">
                     {
                         scanResult.error == null ?
