@@ -131,7 +131,7 @@ export default  function page() {
                 <div className="grid grid-cols-2 gap-2">
                     <div className="flex items-center px-3 text-left text-white font-medium text-xl">
                         <button onClick={gotoHome}><FaArrowLeft className='mr-2 font-semibold cursor-pointer'/></button>    
-                        <span className='text-nowrap'>Redemption Report</span>
+                        <div className="truncate">Redemption <span className="whitespace-nowrap">Report</span></div>
                     </div>
                     
                     <div className="flex items-center justify-end px-3 text-right font-sm font-normal text-white">
