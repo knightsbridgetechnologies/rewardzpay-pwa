@@ -118,7 +118,6 @@ export default  function page() {
                             color="#00254C" // Change the color of the selected range
                             rangeColors={['#00254C']} // Change the color of the range bar
                             dateDisplayFormat='yyyy-MM-dd'
-                            
                             maxDate={new Date()}
                         />
                         <div className='flex justify-end space-x-2'>
