@@ -28,7 +28,7 @@ export default  function page() {
     const [showDateRangePicker, setShowDateRangePicker] = useState(false);
     const [selectionRange, setSelectionRange] = useState({
         startDate: new Date(),
-        endDate: new Date(new Date().setDate(new Date().getDate() + 6)),
+        endDate: new Date(new Date().setDate(new Date().getDate() - 6)),
         key: 'selection'
     });
 
@@ -118,6 +118,8 @@ export default  function page() {
                             color="#00254C" // Change the color of the selected range
                             rangeColors={['#00254C']} // Change the color of the range bar
                             dateDisplayFormat='yyyy-MM-dd'
+                            
+                            maxDate={new Date()}
                         />
                         <div className='flex justify-end space-x-2'>
                             <button onClick={handleClose} className='bg-white hover:bg-gray-100 text-gray-800 text-sm font-semibold py-1 px-4 border border-gray-400 rounded shadow'>Close</button>
